@@ -91,6 +91,9 @@ Item {
                 if (running && root.pauseScrolling) {
                     pause()
                 }
+                if (!root.scrollingEnabled) {
+                    reset()
+                }
             }
             onToChanged: () => reset()
             onDurationChanged: () =>  reset()
