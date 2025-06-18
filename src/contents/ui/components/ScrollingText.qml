@@ -98,7 +98,9 @@ Item {
             onToChanged: () => reset()
             onDurationChanged: () =>  reset()
             onPausedChanged: (paused) => {
-                if (paused && scrollResetOnPause) label.x = 0
+                if (paused && scrollResetOnPause) {
+                    complete()
+                }
             }
         }
 
